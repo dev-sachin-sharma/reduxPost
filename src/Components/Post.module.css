@@ -1,0 +1,74 @@
+.postContainer {
+  width: 80%;
+  margin: 0px auto;
+  padding: 10px;
+  border: 2px solid #000000;
+  margin-top: 10px;
+  border-radius: 10px;
+  background-color: #5e4d4d;
+  background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.postCard {
+  flex: 1 1 250px;
+  border-radius: 20px;
+  border: 5px solid #3f3c3f;
+  color: #fff8f8;
+  background-color: #485461;
+  background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
+  padding: 10px;
+}
+.postCard :is(h3, p) {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  text-align: center;
+}
+.postCard > h3:hover::after {
+  position: absolute;
+  text-align: center;
+  content: "heading";
+  width: 30%;
+  margin-top: 0 px;
+  margin-bottom: 5px;
+  padding: 5px;
+  font-size: 8px;
+  background-color: rgb(78, 74, 74);
+  top: 100%;
+  box-shadow: 0 0 100px #719ECE;
+  left: 34%;
+}
+.postCard :is(h3, p):hover {
+  color: #3498db;
+  font-size: larger;
+}
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+  margin: 0px auto;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
